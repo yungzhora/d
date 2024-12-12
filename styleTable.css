@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f9;
+    color: #3d3a40;
+  }
+  
+  header {
+    background-color: #3d3a40;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  header nav a:hover, header nav a:active {
+    color: #ffcd3c;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #2e2e2e;
+  }
+  
+  p {
+    font-weight: 400;
+    color: #636063;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  
+    .products {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-card {
+      max-width: 100%;
+    }
+  }
+  
+  /* Дополнительный стиль для footer */
+  footer p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  footer {
+    background-color: #3d3a40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #3d3a40;
+    text-align: left;
+}
+
+.table th {
+    background-color: #3d3a40;
+    color: #121212;
+    font-weight: bolder;
+}
+
+.table tr:nth-child(even) {
+    background-color: #7d7d7d;
+}
+
+.table tr:nth-child(odd) {
+    background-color: #c3c2c2;
+}
+
+h1.center {
+    text-align: center;
+}
+
+h3.center {
+    text-align: center;
+}

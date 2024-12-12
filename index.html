@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Современный сайт</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <p class="logo">👍</p>
+    </div> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Главная</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active custom-services" aria-current="page" href="utilites.html">Услуги</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle custom-semesters" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Семестры
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="semester1.html">1 семестр</a></li>
+                <li><a class="dropdown-item" href="semester2.html">2 семестр</a></li>
+                <li><a class="dropdown-item" href="task13.html">Практики</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
+        </div>
+      </div>
+      <button id="authButton" class="btn btn-primary">Авторизация</button>
+    </nav>
+    <div class="header-right">Привет, user!</div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <a href="#">Фронтенд</a>
+      <a href="#">Бэкенд</a>
+    </div>
+    <main>
+      <section class="intro">
+        <h1>Добро пожаловать на мой сайт</h1>
+        <p>Меня зовут Алексеев Филипп Викторович, из группы ЭФБО-08-23, и я начинающий специалист по веб-разработке.</p>
+      </br>
+        <h2>Фронтенд</h2>
+        <p>Фронтенд (или клиентская часть) — это то, что видит пользователь. 
+          Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. 
+          Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, 
+          чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда — обеспечить удобство 
+          использования и эстетическую привлекательность.</p>
+      </br>
+      <h2>Бэкенд</h2>
+      <p>Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. 
+        Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. 
+        Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, 
+        а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда — обеспечить 
+        стабильную работу приложения и безопасность данных.</p>
+      </section>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image\3.jpg" class="d-block w-100" alt="Добрыня Никитич">
+          </div>
+          <div class="carousel-item">
+            <img src="image\2.jpg" class="d-block w-100" alt="Илья Муромец">
+          </div>
+          <div class="carousel-item">
+            <img src="image\1.jpg" class="d-block w-100" alt="Алёша Попович">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+
+  <footer>
+    <div id="map">Яндекс карта</div>
+    <p>&copy; 2024 Все права защищены. Алексеев Филипп Викторович</p>
+  </footer>
+  
+    <!-- Модальное окно для заказа -->
+    <div id="orderModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeOrderModal()">&times;</span>
+        <h2>Введите ваши данные</h2>
+        <form id="orderForm">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" required>
+          
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" required>
+          
+          <label for="address">Адрес:</label>
+          <textarea id="address" required></textarea>
+          
+          <button type="submit">Отправить заказ</button>
+        </form>
+      </div>
+    </div>
+
+  <!-- Модальное окно для авторизации -->
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAuthModal()">&times;</span>
+      <h2>Авторизация</h2>
+      <form id="authForm">
+        <label for="username">Логин:</label>
+        <input type="text" id="username" required>
+        
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Войти</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Яндекс.Карта -->
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="script/code.js"></script>
+  <script src="script/task10.js"></script>
+  <script src="script/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практики</title>
+    <style>
+        img {
+            transition: transform 0.3s ease;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleTable.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <p class="logo">👍</p>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Главная</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active custom-services" aria-current="page"
+                                href="utilites.html">Услуги</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle custom-semesters" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Семестры
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="semester1.html">1 семестр</a></li>
+                                <li><a class="dropdown-item" href="semester2.html">2 семестр</a></li>
+                                <li><a class="dropdown-item" href="task13.html">Практики</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+            <button id="authButton" class="btn btn-primary">Авторизация</button>
+        </nav>
+        <div class="header-right">Привет, user!</div>
+    </header>
+
+    <div class="contenttable">
+        <main>
+            <section>
+                <h1 id="main-title" class="center">Практики на семестр</h1>
+
+                <table id="practices-table" border="1" class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Тема практики</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>HTML и CSS</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>JavaScript основы</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>DOM манипуляции</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Работа с событиями</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Браузерное окружение</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <button id="second-semester-btn" class="order-btn">Посмотреть практики второго семестра</button>
+
+    <div class="center">
+        <h2>Фото студента</h2>
+        <img id="student-photo" src="image\3.jpg" alt="Фото студента" width="200" height="200">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Все права защищены. Алексеев Филипп Викторович</p>
+    </footer>
+
+    <!-- Модальное окно для авторизации -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <h2>Авторизация</h2>
+            <form id="authForm">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+    <script src="script/code.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // 1. Обработчик события click на заголовке H1
+        document.getElementById('main-title').addEventListener('click', () => {
+            alert('Вы кликнули на заголовок - так держать!');
+        });
+
+        // 2. Обработчик события click для смены данных таблицы
+        document.getElementById('second-semester-btn').addEventListener('click', () => {
+            const tableBody = document.querySelector('#practices-table tbody');
+            tableBody.innerHTML = `
+                <tr><td>1</td><td>Базовое бэкенд-приложение</td></tr>
+                <tr><td>2</td><td>HTTP-запросы</td></tr>
+                <tr><td>3</td><td>JSON и работа с ним</td></tr>
+                <tr><td>4</td><td>HTTP-ответы</td></tr>
+                <tr><td>5</td><td>Проектирование API</td></tr>
+                <tr><td>6</td><td>Роутинг и его настройка</td></tr>
+                <tr><td>7</td><td>NoSQL базы данных</td></tr>
+                <tr><td>8</td><td>Обеспечение авторизации и доступа пользователей</td></tr>
+                <tr><td>9</td><td>Работа сторонних сервисов уведомления и авторизации</td></tr>
+                <tr><td>10</td><td>Основы ReactJS</td></tr>
+                <tr><td>11</td><td>Работа с компонентами динамической DOM</td></tr>
+                <tr><td>12</td><td>Использование хуков в React</td></tr>
+                <tr><td>13</td><td>Основы микросервисной архитектуры</td></tr>
+                <tr><td>14</td><td>Разработка классических модулей веб-приложений</td></tr>`;
+        });
+
+        // 3. Обработчик события mouseover для увеличения фото студента
+        const studentPhoto = document.getElementById('student-photo');
+        studentPhoto.addEventListener('mouseover', () => {
+            studentPhoto.style.transform = 'scale(1.1)';
+        });
+        studentPhoto.addEventListener('mouseout', () => {
+            studentPhoto.style.transform = 'scale(1)';
+        });
+
+        // Обработчик события click для замены фотографии
+        studentPhoto.addEventListener('click', () => {
+            studentPhoto.src = 'image/2.jpg'; // Замените на URL фотографии преподавателя
+            studentPhoto.alt = 'Фото преподавателя';
+        });
+
+        // 4. Обработчик события dblclick для вывода alert
+        studentPhoto.addEventListener('dblclick', () => {
+            alert('Не налегай, у меня не так много любимых преподавателей');
+        });
+    </script>
+</body>
+
+</html>
